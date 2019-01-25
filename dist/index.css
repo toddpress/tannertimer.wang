@@ -4,15 +4,17 @@ html,body {
     margin: 0px;
     font-family: Arial;
 }
+body {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     display: flex;
-    font-size: 14px;
     align-items: stretch;
     justify-content: center;
     flex-direction: column;
     background: whitesmoke;
-    padding: 30px;
 }
 
 :focus { outline: none !important; }
@@ -23,7 +25,6 @@ body {
 
 .vbox {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: stretch;
 }
