@@ -4,16 +4,21 @@ html,body {
     margin: 0px;
     font-family: Arial;
 }
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+}
 body {
     margin: 0;
     padding: 0;
 }
 
 body {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-direction: column;
+
+
+
+    width: 100vw;
+    height: 100vh;
     background: whitesmoke;
 }
 
@@ -30,13 +35,22 @@ body {
 }
 
 
-body,div,form,header,footer,section,input,button,nav,aside,article {
+body, 
+div, 
+form, 
+header, 
+footer, 
+section, 
+input, 
+button,
+aside, 
+article {
     box-sizing: border-box;
 }
 
-div,section,input,ul,main,article,.grow {
+/* div,section,input,ul,main,article,.grow {
     flex: 1 1 auto;
-}
+} */
 
 input {
     display: block;
@@ -67,7 +81,52 @@ button {
 button:hover {
     background: #3a8eef;
 }
+h1 {
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+}
+.banner {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2.0rem 0;
+    justify-content: center;
+    
+}
+.banner .banner__heading-1 {
+    display: block;
+}
+.time__unit {
 
+}
+.timer {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+    margin:  0% auto;
+}
+.timer li {
+    display: flex;
+    flex-direction: column;
+    padding: 2.0rem 0;
+}
+
+.timer li .time__value {
+    padding: 29px 15px;
+    background: rgba(0,0,0,0.8);
+    color: rgba(255,255,255,0.9);
+    width: 4.0rem;
+    text-align: center;
+}
+.timer li .time__unit {
+    flex-wrap: nowrap;
+    display: block;
+    color: rgba(0,0,0,0.8);
+    text-align: right;
+}
 header,footer {
     flex: 0 0 auto;
     display: flex;
@@ -80,16 +139,8 @@ header,footer {
 
 ul {
     list-style: none inside none;
-    margin: 0;
-    padding: 0;
-    padding: 10px;
-}
+} 
 
 li {
-    padding: 8px 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    border-bottom: 1px solid whitesmoke;
+
 }

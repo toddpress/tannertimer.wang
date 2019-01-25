@@ -19,9 +19,9 @@ tag App
 	prop date
 	def build 
 		@date = { 
-			days: 0, 
-			hours: 0, 
-			minutes: 0, 
+			days: 0,
+			hours: 0,
+			minutes: 0,
 			seconds: 0
 		}
 
@@ -31,9 +31,9 @@ tag App
 		var difference = later - now
 
 		@date:days = Math.floor difference / day
-		@date:hours =  Math.floor (difference % day) / hour
-		@date:minutes =  Math.floor (difference % hour) / minute
-		@date:seconds =  Math.floor (difference % minute) / second
+		@date:hours = Math.floor (difference % day) / hour
+		@date:minutes = Math.floor (difference % hour) / minute
+		@date:seconds = Math.floor (difference % minute) / second
 
 	def setup
 		schedule(interval: 1000)
@@ -44,19 +44,20 @@ tag App
 
 	def render
 		<self.vbox>
-			<h1> "Tannertimer.wang"
-			<ul>
-				<li> 
-					<div.time__days> "{@date:days}"
-						<span> "days"
-				<li>
-					<div.time__minutes> "{@date:minutes}"
-						<span> "mins"
-				<li>
-					<div.time__hours> "{@date:hours}"
-						<span> "hrs"
-				<li>
-					<div.time__seconds> "{@date:seconds}"
-						<span> "secs"
+			<header.banner>
+				<h1.banner__heading-1> "tannertimer.wang"
+				<ul.timer>
+					<li> 
+						<span.time__value.time__days> "{@date:days}"
+						<span.time__unit> "days"
+					<li>
+						<span.time__value.time__minutes> "{@date:minutes}"
+						<span.time__unit> "mins"
+					<li>
+						<span.time__value.time__hours> "{@date:hours}"
+						<span.time__unit> "hrs"
+					<li>
+						<span.time__value.time__seconds> "{@date:seconds}"
+						<span.time__unit> "secs"
 
 Imba.mount <App[store]>
